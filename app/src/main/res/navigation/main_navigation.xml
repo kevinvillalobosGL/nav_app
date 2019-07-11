@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.gl.navapp.main.HomeFragment"
+        android:label="@string/fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/people_fragment"
+        android:name="com.gl.navapp.main.PeopleFragment"
+        android:label="@string/fragment_people"
+        tools:layout="@layout/fragment_people" />
+</navigation>

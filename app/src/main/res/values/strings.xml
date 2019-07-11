@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">NavApp</string>
+
+    <!-- Fragments -->
+    <string name="fragment_welcome">Welcome</string>
+    <string name="fragment_next">Next</string>
+    <string name="fragment_last">Last</string>
+    <string name="fragment_home">Home</string>
+    <string name="fragment_people">People</string>
+
+    <string name="welcome_title">Hello! This is the beginning of everything</string>
+    <string name="welcome_button">Go to Next</string>
+
+    <string name="next_title">Wait! You are going to Fast!</string>
+    <string name="next_button">Go to Last</string>
+    <string name="next_fragment_number">Number</string>
+
+    <string name="last_title">You made it to the last! Lucky you!</string>
+    <string name="last_button">Let’s finish this!</string>
+
+</resources>
