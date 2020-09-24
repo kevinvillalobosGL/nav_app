@@ -1,43 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/welcome_fragment">
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:startDestination="@id/welcome_fragment">
 
     <fragment
-        android:id="@+id/welcome_fragment"
-        android:name="com.gl.navapp.first.WelcomeFragment"
-        android:label="@string/fragment_welcome"
-        tools:layout="@layout/fragment_welcome" >
+            android:id="@+id/welcome_fragment"
+            android:name="com.gl.navapp.first.WelcomeFragment"
+            android:label="@string/fragment_welcome"
+            tools:layout="@layout/fragment_welcome">
         <action
-            android:id="@+id/action_next"
-            app:destination="@id/next_fragment" />
+                android:id="@+id/action_next"
+                app:destination="@id/next_fragment"
+                app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"
+                app:popUpToInclusive="false" />
     </fragment>
 
     <fragment
-        android:id="@+id/next_fragment"
-        android:name="com.gl.navapp.first.NextFragment"
-        android:label="@string/fragment_next"
-        tools:layout="@layout/fragment_next" >
+            android:id="@+id/next_fragment"
+            android:name="com.gl.navapp.first.NextFragment"
+            android:label="@string/fragment_next"
+            tools:layout="@layout/fragment_next">
         <action
-            android:id="@+id/action_next"
-            app:destination="@id/last_fragment" />
+                android:id="@+id/action_next"
+                app:destination="@id/last_fragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/last_fragment"
-        android:name="com.gl.navapp.first.LastFragment"
-        android:label="@string/fragment_last"
-        tools:layout="@layout/fragment_last" >
+            android:id="@+id/last_fragment"
+            android:name="com.gl.navapp.first.LastFragment"
+            android:label="@string/fragment_last"
+            tools:layout="@layout/fragment_last">
+        <deepLink
+                android:id="@+id/video_details_deeplink"
+                android:autoVerify="true"
+                app:uri="nav.test.com/last?id={id}"
+                tools:targetApi="m" />
         <argument
-            android:name="num"
-            app:argType="integer"
-            android:defaultValue="1" />
+                android:name="num"
+                android:defaultValue="1"
+                app:argType="integer" />
     </fragment>
 
     <activity
-        android:id="@+id/main_activity"
-        android:name="com.gl.navapp.main.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main"/>
+            android:id="@+id/main_activity"
+            android:name="com.gl.navapp.main.MainActivity"
+            android:label="activity_main"
+            tools:layout="@layout/activity_main" />
 </navigation>

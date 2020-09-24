@@ -31,10 +31,10 @@ class LastFragment : Fragment() {
         // Setup Click Listener
         button_last.setOnClickListener {
             // Handle Navigation using Destination
-            findNavController().navigate(R.id.main_activity)
+            /*findNavController().navigate(R.id.main_activity)
 
             // Finish the Parent Activity, we don't want to get back here!
-            if (activity != null) activity!!.finish()
+            if (activity != null) activity!!.finish()*/
         }
     }
 
